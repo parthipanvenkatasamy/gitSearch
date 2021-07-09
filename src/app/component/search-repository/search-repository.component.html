@@ -1,0 +1,18 @@
+
+  <div class="container">
+    <div class="p-2 mb-2 bg-dark text-white">Github Search</div>
+    <div class="search">
+      <input type="text" [(ngModel)]="searchValue" #gitSearchInput class="form-control" />
+    </div>
+    <ng-container *ngIf="searchValue">
+      <div class="dropdown" *ngFor="let item of repositories">
+        <a [href]="item.html_url" class="list-group-item">
+          <div class="flexcontainer">
+        <div> 
+          {{ item.full_name }}
+        </div><div class="git_language">{{item.language}}</div></div>
+        <div class="date_time">{{moment(item.updated_at).format('dddd, MMM D, YYYY [at] h:mm A z')}}</div>
+      </a>
+      </div>
+  </ng-container>
+  </div>

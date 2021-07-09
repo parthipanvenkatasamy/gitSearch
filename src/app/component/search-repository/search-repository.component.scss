@@ -1,0 +1,40 @@
+.container{
+  position: relative;
+  top: 100px;
+  width: 80%;
+  margin: 0 auto;
+    .search {
+      position: relative;
+      display: flex;
+      margin-bottom: 10px;
+    }
+    .form-control:focus {
+      box-shadow: inset 0 0px 0 #ddd;
+    }
+    p{
+        color: #383c52;
+    }
+    .list-group-item {
+      border-radius: 4px;
+      cursor: pointer;
+      text-decoration: none;
+        &:hover {
+          color: #545e69;
+        }
+    }
+    .date_time {
+      font-size: 10px;
+      padding-top: 5px;
+    }
+    .flexcontainer {
+      display: -webkit-flex;
+      display: flex;
+      -webkit-flex-direction: row;
+     flex-direction: row;
+    }
+    .git_language {
+      right: 50%;
+      position: absolute;
+      font-size: 12px;
+    }
+  }
